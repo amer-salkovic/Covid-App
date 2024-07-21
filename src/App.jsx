@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar/NavBar';
 import Home from './Components/Home/Home';
 import CovidStats from './Components/CovidStats/CovidStats';
-import About from './Components/About/About';
+import {About} from './Components/About/About';
 import CountryStats from './Components/CountryStats/CountryStats';
 import Footer from './Components/Footer/Footer';
 import { createGlobalStyle } from 'styled-components';
