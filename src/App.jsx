@@ -9,7 +9,6 @@ import Footer from './Components/Footer/Footer';
 import { createGlobalStyle } from 'styled-components';
 import { MyDataProvider } from './Context/Provider';
 
-
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -25,14 +24,12 @@ function App() {
       <Router>
         <GlobalStyle />
         <Navbar />
-        
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/covidstats" element={<CovidStats />} />
-            <Route path="/aboutus" element={<About />} />
-            <Route path="/countrystats" element={<CountryStats />} />
-          </Routes>
-    
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/covidstats" element={<CovidStats />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/countrystats" element={<CountryStats />} />
+        </Routes>
         <Footer />
       </Router>
     </MyDataProvider>
