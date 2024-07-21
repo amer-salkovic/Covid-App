@@ -11,6 +11,7 @@ import {
   StyledCard,
   StyledCardMedia,
   StyledGrid,
+ 
   StyledTypographyName,
   StyledTypographyCity,
   LineDiv,
@@ -30,6 +31,7 @@ const creators = [
     
     github: "https://github.com/amer-salkovic",
     facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
   },
   {
     name: "Faris Pepić",
@@ -40,6 +42,7 @@ const creators = [
     "farisP.jpeg",
     github: "https://github.com/Faris993",
     facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
     
   },
   {
@@ -49,8 +52,9 @@ const creators = [
     description: "Enes work's in center NIT as a Web developer",
     image:
       "enesK.jpeg",
-    github: "https://github.com/ErminMuslic",
+    github: "https://github.com/koracenes",
     facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
   },
 
   {
@@ -62,11 +66,17 @@ const creators = [
       "ajtanaDj.jpg",
     github: "https://github.com/AjtanaDjerlek",
     facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
   },
 ]
 
 export const About = () => {
   return (
+    <div style={{ fontFamily: "Arial", textAlign: "center", marginTop:"50px"}}>
+    <h2>
+      Our application is made on the basis of accurate data regarding
+      information about covid-19. You can see about our team.
+    </h2>
     <StyledGrid container>
       {creators.map((creator, index) => (
         <StyledCard key={index}>
@@ -87,6 +97,7 @@ export const About = () => {
             <StyledTypographyDescription variant="body2" color="text.secondary">
               {creator.description}
             </StyledTypographyDescription>
+            
             <StyledFacebookLink href={creator.facebook} target="_blank">
                 <FacebookIcon />
               </StyledFacebookLink>
@@ -96,10 +107,12 @@ export const About = () => {
             <StyledInstagramLink href={creator.instagram} target="_blank">
                   <InstagramIcon />
                 </StyledInstagramLink>
+                
           </CardContent>
         </StyledCard>
       ))}
     </StyledGrid>
+    </div>
   )
 }
 

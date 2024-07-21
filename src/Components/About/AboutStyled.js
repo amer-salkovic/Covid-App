@@ -8,31 +8,34 @@ export const StyledGrid = styled(Grid)(({ theme }) => ({
   alignItems: "center",
   flexWrap: "wrap",
   gap: theme.spacing(1),
+  boxShadow: theme.shadows[4], // Dodajemo box-shadow ovde
+  
   
 }));
 
+
+
+ 
 export const StyledCard = styled(Card)(({ theme }) => ({
-  maxWidth: 250,
-  height: 350,
-  borderRadius: 10,
-  color: "black",
-  margin: theme.spacing(3),
-  position: "relative",
-  transition: "transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out", // Dodavanje tranzicije za width i height
-  overflow: "visible",
-  "&:hover": {
-    transform: "scale(1.05)",
-    width: 300, // Povećanje širine na hover
-    height: 450, // Povećanje visine na hover
-    
-  },
-  boxShadow: theme.shadows[2],
-}));
+    maxWidth: 250,
+    height: 300,
+    borderRadius: 10,
+    margin: theme.spacing(2),
+    position: "relative",
+    paddingTop: theme.spacing(8),
+    transition: "transform 0.1s ease-in-out",
+    overflow: "visible",
+    "&:hover": {
+      transform: "scale(1.12)",
+    },
+    boxShadow: theme.shadows[3],
+  }))
+
 
 export const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
   width: 150,
   height: 150,
-  borderRadius: "50%",
+  borderRadius: "20%",
   position: "absolute",
   top: -105,
   
@@ -41,9 +44,9 @@ export const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
   boxShadow: theme.shadows[3],
   transition: "transform 0.3s ease-in-out", // Dodavanje tranzicije za transform
   
-  "&:hover": {
-    transform: "scale(1.1)", // Uvećanje slike prilikom hovera
-  },
+  
+    
+
 }));
 
 export const StyledTypographyName = styled(Typography)(({ theme }) => ({
@@ -72,11 +75,12 @@ export const LineDiv = styled("div")(({ theme }) => ({
 export const StyledTypographyDescription = styled(Typography)(({ theme }) => ({
   fontSize: "17px",
   fontWeight: 100,
-  color: "inherit",
+  color: "black ",
   marginTop: "12px",
   textAlign: "center",
   marginBottom: theme.spacing(1),
   marginTop: theme.spacing(5),
+  
   
 }));
 
@@ -121,3 +125,6 @@ export const StyledInstagramLink = styled(Link)(({ theme }) => ({
     fontSize: "2rem",
   },
 }));
+
+
+
