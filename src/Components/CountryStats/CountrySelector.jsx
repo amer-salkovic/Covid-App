@@ -1,7 +1,12 @@
 import React from "react";
 import { Select, Label } from "./CountStat.style";
 
-const CountrySelector = ({ countries, selectedCountry, onCountryChange }) => (
+const CountrySelector = ({
+  countries,
+
+  selectedCountry,
+  onCountryChange,
+}) => (
   <>
     <Label htmlFor="country-select">Select Country:</Label>
     <Select
