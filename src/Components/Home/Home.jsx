@@ -1,90 +1,66 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { styled } from '@mui/system';
-import { Box, Typography, Card, CardContent } from '@mui/material';
-
-const Container = styled(Box)({
-  textAlign: 'center',
-  padding: '20px',
-});
-
-const MapImage = styled('img')({
-  width: '100%',
-  height: 'auto',
-  marginBottom: '20px',
-});
-
-const StatsContainer = styled(Box)({
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '20px',
-  marginTop: '20px',
-});
-
-const StatCard = styled(Card)({
-  width: '250px',
-  textAlign: 'center',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  transition: 'transform 0.3s, box-shadow 0.3s',
-  '&:hover': {
-    transform: 'scale(1.05)',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-  },
-});
-
-const StatNumber = styled(Typography)({
-  fontSize: '1.5em',
-  fontWeight: 'bold',
-});
-
-const LinkContainer = styled(Link)({
-  textDecoration: 'none',
-});
-
-const CountryStatsCard = styled(StatCard)({
-  '&:hover': {
-    '& $StatNumber': {
-      color: 'red',
-    },
-  },
-});
+import React from "react";
+import { Link } from "react-router-dom";
+import { styled } from "@mui/system";
+import { Box, Typography, Card, CardContent } from "@mui/material";
+import { Directions } from "@mui/icons-material";
+import {
+  Container,
+  StatsContainer,
+  StatCard,
+  StatNumber,
+  LinkContainer,
+  CountryStatsCard,
+} from "./home.style";
 
 const Home = () => {
   return (
     <Container>
-      <MapImage src="/src/Components/Home/Img/glavna.png" alt="World Map" />
-      <Typography variant="h4" component="h2" color="primary" gutterBottom>
+      <Typography
+        variant="h1"
+        component="h2"
+        sx={{
+          color: "#00ff00",
+          fontWeight: "bold",
+          fontSize: "5.5rem",
+          marginTop: "100px",
+          textShadow: "-5px 5px 2px rgba(0, 0, 0, 0.9)",
+        }}
+      >
         World Stats
       </Typography>
       <StatsContainer>
         <StatCard>
           <CardContent>
-            <Typography variant="h6" component="h3">
+            <Typography variant="h6" component="h3" style={{ color: "yellow" }}>
               Recovered:
             </Typography>
-            <StatNumber style={{ color: 'green' }}>1,911,806,582</StatNumber>
+            <StatNumber style={{ color: "green" }}>1,911,806,582</StatNumber>
           </CardContent>
         </StatCard>
         <StatCard>
           <CardContent>
-            <Typography variant="h6" component="h3">
+            <Typography variant="h6" component="h3" style={{ color: "yellow" }}>
               Deaths:
             </Typography>
-            <StatNumber style={{ color: 'red' }}>21,032,028</StatNumber>
+            <StatNumber style={{ color: "red" }}>21,032,028</StatNumber>
           </CardContent>
         </StatCard>
         <StatCard>
           <CardContent>
-            <Typography variant="h6" component="h3">
+            <Typography variant="h6" component="h3" style={{ color: "yellow" }}>
               Active Cases:
             </Typography>
-            <StatNumber style={{ color: 'blue' }}>50,362,509</StatNumber>
+            <StatNumber style={{ color: "#00a2ff" }}>50,362,509</StatNumber>
           </CardContent>
         </StatCard>
         <LinkContainer to="/countrystats">
           <CountryStatsCard>
             <CardContent>
-              <Typography variant="h6" component="h3">
+              <Typography
+                variant="h6"
+                component="h3"
+                style={{ color: "yellow" }}
+              >
                 Country Stats
               </Typography>
               <StatNumber>Link</StatNumber>

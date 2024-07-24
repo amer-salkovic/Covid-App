@@ -134,7 +134,8 @@ const CovidCountries = () => {
       </FormGroup>
       <ShowStats>
         <h2>
-          Covid Data for {selectedCountry} on {formattedDate}
+          Covid Data on {formattedDate} <br />
+          for {selectedCountry}
         </h2>
         <CovidStats covidData={covidData} />
       </ShowStats>
